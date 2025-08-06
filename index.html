@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>My Image Gallery</h1>
+
+  <div class="filter-buttons">
+    <button onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('pepe')">Pepe</button>
+    <button onclick="filterImages('city')">City</button>
+    <button onclick="filterImages('nature')">Nature</button>
+    <button onclick="filterImages('sky')">Sky</button>
+  </div>
+
+  <div class="gallery">
+    <div class="image pepe">
+      <img src="https://i.imgur.com/1m8HknG.jpg" alt="Pepe" onclick="openLightbox(this)" />
+    </div>
+    <div class="image city">
+      <img src="https://i.imgur.com/aD1m1lQ.jpg" alt="City" onclick="openLightbox(this)" />
+    </div>
+    <div class="image nature">
+      <img src="https://i.imgur.com/3z1JtTg.jpg" alt="Nature" onclick="openLightbox(this)" />
+    </div>
+    <div class="image sky">
+      <img src="https://i.imgur.com/TkR4JSO.jpg" alt="Sky" onclick="openLightbox(this)" />
+    </div>
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img class="lightbox-img" id="lightbox-img" />
+    <div class="controls">
+      <span onclick="prevImage()">&#10094;</span>
+      <span onclick="nextImage()">&#10095;</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
